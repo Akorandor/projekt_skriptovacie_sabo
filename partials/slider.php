@@ -20,7 +20,7 @@
 
 
 <?php
-    // Získanie zoznamu projektov z databázy
+    // Získanie zoznamu projektov z databáz
     $sql = "SELECT * FROM projekty ORDER BY datum_vytvorenia DESC LIMIT 5"; 
     $result = $conn->query($sql);
 
