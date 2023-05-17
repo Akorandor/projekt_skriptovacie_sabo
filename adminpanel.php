@@ -8,7 +8,7 @@ session_start();
 
 // Kontrola, či je používateľ prihlásený
 if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
-    // Používateľ nie je prihlásený, presmerovanie na prihlasovaciu stránku
+
     header("Location: login.php");
     exit;
 }

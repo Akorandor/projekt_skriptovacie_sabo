@@ -21,7 +21,7 @@
    
    <?php
 
-$sql = "SELECT email, name FROM kontakt ORDER BY id DESC LIMIT 1"; // Získajte posledný riadok z databázy
+$sql = "SELECT email, name FROM kontakt ORDER BY id DESC LIMIT 1"; // posledný riadok z databázy
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {

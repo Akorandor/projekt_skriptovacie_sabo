@@ -10,11 +10,11 @@
     <?php
     include 'inc/database.php';
 
-    // Overenie, či bolo zaslané ID admina
+ 
     if (!empty($_GET['id'])) {
         $adminId = $_GET['id'];
 
-        // Získanie údajov o adminovi z databázy
+
         $sql = "SELECT * FROM admin_users WHERE id = '$adminId'";
         $result = $conn->query($sql);
 
@@ -53,7 +53,6 @@
         $updateResult = $conn->query($updateSql);
 
         if ($updateResult) {
-            // Aktualizácia úspešná, presmerovanie na adminpanel.php
             header("Location: adminpanel.php");
             exit();
         } else {

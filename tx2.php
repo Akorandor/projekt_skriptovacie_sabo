@@ -21,7 +21,7 @@
    
    <?php
 
-$sql = "SELECT full_name FROM faq ORDER BY id DESC LIMIT 1"; // Získajte posledný riadok z databázy
+$sql = "SELECT full_name FROM faq ORDER BY id DESC LIMIT 1"; // posledný riadok z databázy
 $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {

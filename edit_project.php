@@ -11,7 +11,7 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 
 include 'inc/database.php';
 
-// Overenie, či bolo zaslané ID projektu
+
 if (!empty($_GET['id'])) {
     $projectId = $_GET['id'];
 
@@ -40,13 +40,12 @@ if (!empty($_GET['id'])) {
 
 // Spracovanie formulára po odoslaní
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Získanie aktualizovaných hodnôt z formulára
+
     $updatedNazov = $_POST['nazov'];
     $updatedLink = $_POST['link'];
     $updatedObrazok = $_POST['obrazok'];
     $updatedPopis = $_POST['popis'];
 
-    // Aktualizácia údajov o projekte v databáze
     $updateSql = "UPDATE projekty SET nazov = '$updatedNazov', link = '$updatedLink', obrazok = '$updatedObrazok', popis = '$updatedPopis' WHERE id = '$projectId'";
 
     if ($conn->query($updateSql) === TRUE) {

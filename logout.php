@@ -1,7 +1,7 @@
 <?php 
 
-session_start(); // Ak ešte nie je spustená session
-session_unset(); // Odstráni všetky premenné zo session
+session_start(); 
+session_unset(); 
 session_destroy(); // Zruší session
 
 // Presmerovanie na prihlasovaciu stránku

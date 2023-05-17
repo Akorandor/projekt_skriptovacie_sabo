@@ -22,22 +22,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         // Overenie hesla a admin_potvrdenie
         if (password_verify($password, $hashedPassword) && $adminPotvrdenie == true) {
-            // Prihlásenie úspešné, môžete presmerovať používateľa na stránku adminpanelu
+            // Prihlásenie úspešné
             session_start();
             $_SESSION["username"] = $username;
             $_SESSION['loggedin'] = true;
             header("Location: adminpanel.php");
             exit();
         } else {
-            // Neplatné používateľské meno alebo heslo, alebo admin_potvrdenie nie je nastavené na true
+
             $loginError = "Este ste neni priradený ako admin.";
         }
     } else {
-        // Neplatné používateľské meno alebo heslo
+
         $loginError = "Neplatné používateľské meno alebo heslo.";
     }
 
-    // Uzavretie spojenia s databázou
+
     $conn->close();
 }
 ?>
