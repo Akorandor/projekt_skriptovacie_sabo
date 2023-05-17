@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST["password"];
     $confirmPassword = $_POST["confirm_password"];
 
-    // Validácia údajov (môžete pridať ďalšie validácie podľa potreby)
+    // Validácia údajov
     $errors = [];
 
     // Kontrola, či sú všetky polia vyplnené
